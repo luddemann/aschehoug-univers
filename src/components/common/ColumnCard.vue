@@ -4,7 +4,7 @@
             <img
                 class="object-cover"
                 src="@/assets/images/ipad-aschehoug.jpg"
-                alt="star wars image"
+                alt="child with ipad"
             />
         </div>
         <div class="w-full">
