@@ -8,6 +8,3 @@ import RowCard from './common/RowCard.vue';
         <RowCard />
     </section>
 </template>
-
-<style>
-</style>

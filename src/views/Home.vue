@@ -1,32 +1,23 @@
 <script setup>
 import Hero from '../components/Hero.vue'
-import Aktuelt from '../components/Aktuelt.vue'
-import Saker from '../components/Saker.vue'
+import Featured from '../components/Featured.vue'
+import Articles from '../components/Articles.vue'
 import Footer from '../components/Footer.vue'
+
+const scrollTo = () => {
+  var el = document.getElementsByClassName("featured")[0];
+  el.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 <template>
   <main>
     <Hero :scroll="scrollTo" />
-    <Aktuelt class="aktuelt" />
-    <Saker />
+    <Featured class="featured" />
+    <Articles />
     <Footer />
   </main>
 </template>
 
 
-<script>
-export default {
-  data() {
-    return {
 
-    }
-  },
-  methods: {
-    scrollTo() {
-      var el = this.$el.getElementsByClassName("aktuelt")[0];
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-};
-</script>

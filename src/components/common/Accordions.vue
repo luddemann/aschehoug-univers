@@ -1,4 +1,30 @@
 <script setup>
+import { ref } from 'vue'
+
+const links = [
+    'Sed non neque a nisl tincidunt mattis',
+    'Vestibulum auctor orci quis lacus rutrumrisus',
+    'Nullam hendrerit lacinia mi',
+    'Phasellus sit amet turpis sapien',
+    'Aliquam lorem ac porta mattis',
+    'Pulvinar felis elementum',
+    'Nullam hendrerit lacinia mi'
+]
+const items = [
+    { text: "Lokus: digitale læremidler" },
+    { text: "Nettbutikk - kjøp læremidler" },
+    { text: "Lorem ipsum" },
+    { text: "Lorem ipsum" },]
+
+let isActive = ref(null)
+
+const toggleItem = (index) => {
+    if (isActive.value === index) {
+        isActive.value = null
+    } else {
+        isActive.value = index;
+    }
+}
 </script>
 
 <template>
@@ -36,38 +62,3 @@
         <hr class="bg-[#BFBFBF]" />
     </div>
 </template>
-
-
-<script>
-export default {
-    data() {
-        return {
-            links: [
-                'Sed non neque a nisl tincidunt mattis',
-                'Vestibulum auctor orci quis lacus rutrumrisus',
-                'Nullam hendrerit lacinia mi',
-                'Phasellus sit amet turpis sapien',
-                'Aliquam lorem ac porta mattis',
-                'Pulvinar felis elementum',
-                'Nullam hendrerit lacinia mi'
-            ],
-            items: [
-                { text: "Lokus: digitale læremidler" },
-                { text: "Nettbutikk - kjøp læremidler" },
-                { text: "Lorem ipsum" },
-                { text: "Lorem ipsum" },
-            ],
-            isActive: null
-        }
-    },
-    methods: {
-        toggleItem(index) {
-            if (this.isActive === index) {
-                this.isActive = null
-            } else {
-                this.isActive = index;
-            }
-        },
-    }
-};
-</script>

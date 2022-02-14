@@ -1,9 +1,17 @@
 <script setup>
+import { defineProps } from 'vue'
+
+defineProps({
+  scroll: {
+    type: Function,
+    required: true
+  }
+})
 </script>
 
 <template>
   <section class="w-full relative">
-    <div class="w-full bg-blue-900 h-[180px] md:h-[810px]"></div>
+    <div class="w-full bg-blue-900 h-[180px] md:h-[810px]" />
     <div
       class="w-full h-full flex px-[15px] flex-col items-center text-center md:absolute md:top-0 md:left-0 md:justify-center md:items-center text-black md:text-white"
     >
@@ -29,26 +37,6 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-
-  data() {
-    return {
-
-    }
-  },
-  props: {
-    scroll: {
-      type: Function,
-      required: true
-    }
-  },
-  methods: {
-
-  }
-};
-</script>
 
 
 

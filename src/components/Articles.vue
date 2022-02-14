@@ -1,5 +1,8 @@
 <script setup>
+import { ref } from 'vue'
 import ColumnCard from './common/ColumnCard.vue';
+
+const items = ref(3)
 </script>
 
 <template>
@@ -13,7 +16,7 @@ import ColumnCard from './common/ColumnCard.vue';
         </div>
         <div class="flex items-center justify-between">
             <button
-                @click="items = items + 3"
+                @click="items += 3"
                 class="flex items-center border border-[#979797] p-[11px] rounded text-aschehoug-light-blue hover:text-white hover:bg-aschehoug-light-blue transition"
             >
                 <p class="mr-[10px]">Se flere saker</p>
@@ -41,15 +44,3 @@ import ColumnCard from './common/ColumnCard.vue';
     </section>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            items: 3
-        }
-    },
-    methods: {
-
-    }
-};
-</script>

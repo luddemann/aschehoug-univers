@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <article class="flex flex-col gap-3">
         <div class="w-full aspect-w-3 aspect-h-2">
